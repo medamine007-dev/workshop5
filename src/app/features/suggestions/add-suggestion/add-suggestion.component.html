@@ -1,0 +1,41 @@
+<div class="form-container">
+  <h2>{{ isEditMode ? 'Modifier' : 'Ajouter' }} une Suggestion</h2>
+  <form [formGroup]="suggestionForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label>Titre</label>
+      <input type="text" formControlName="title" placeholder="Titre de la suggestion" />
+      <span class="error" *ngIf="suggestionForm.get('title')?.invalid && suggestionForm.get('title')?.touched">Titre requis</span>
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea formControlName="description" rows="4" placeholder="Description..."></textarea>
+      <span class="error" *ngIf="suggestionForm.get('description')?.invalid && suggestionForm.get('description')?.touched">Description requise</span>
+    </div>
+
+    <div class="form-group">
+      <label>Catégorie</label>
+      <select formControlName="category">
+        <option value="">-- Choisir --</option>
+        <option *ngFor="let c of categories" [value]="c">{{ c }}</option>
+      </select>
+      <span class="error" *ngIf="suggestionForm.get('category')?.invalid && suggestionForm.get('category')?.touched">Catégorie requise</span>
+    </div>
+
+    <div class="form-group">
+      <label>Statut</label>
+      <select formControlName="status">
+        <option value="en attente">En attente</option>
+        <option value="approuvée">Approuvée</option>
+        <option value="refusée">Refusée</option>
+      </select>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="suggestionForm.invalid" class="btn-save">Save</button>
+      <a routerLink="/suggestions" class="btn-cancel">Annuler</a>
+    </div>
+
+  </form>
+</div>

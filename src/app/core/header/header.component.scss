@@ -1,0 +1,5 @@
+.navbar { display:flex; align-items:center; justify-content:space-between; background:#3f51b5; padding:0 24px; height:56px; }
+.brand { color:#fff; font-size:1.2rem; font-weight:bold; }
+ul { list-style:none; display:flex; gap:24px; margin:0; padding:0; }
+a { color:rgba(255,255,255,.8); text-decoration:none; }
+a.active, a:hover { color:#fff; }

@@ -1,0 +1,19 @@
+.list-container { max-width:800px; margin:30px auto; padding:0 16px; }
+.list-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.btn-add { background:#3f51b5; color:#fff; padding:8px 18px; border-radius:4px; text-decoration:none; }
+.btn-add:hover { background:#303f9f; }
+.card { background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.1); margin-bottom:16px; padding:16px; display:flex; justify-content:space-between; align-items:center; }
+.card-body h3 { margin:0 0 6px; }
+.card-body p { margin:0 0 8px; color:#555; }
+.meta { display:flex; gap:12px; align-items:center; }
+.badge { background:#e3f2fd; color:#1565c0; padding:2px 8px; border-radius:12px; font-size:.8rem; }
+.status { color:#888; font-size:.85rem; }
+.likes { font-size:.85rem; }
+.card-actions { display:flex; flex-direction:column; gap:8px; }
+button { padding:6px 14px; border:none; border-radius:4px; cursor:pointer; background:#e0e0e0; }
+button:hover { background:#bdbdbd; }
+.btn-delete { background:#ffebee; color:#c62828; }
+.btn-delete:hover { background:#ef9a9a; }
+.btn-like { background:#e8f5e9; color:#2e7d32; }
+.btn-like:hover { background:#a5d6a7; }
+.empty { text-align:center; color:#999; padding:40px; }
